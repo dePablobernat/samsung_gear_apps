@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://bernatdepablo.com/LockPass" version="1.0.0" height="360" width="360" viewmodes="fullscreen">
+    <tizen:application id="9MOCQ9V7Dr.LockPass" package="9MOCQ9V7Dr" required_version="2.3.1"/>
+    <author href="http://www.bernatdepablo.com" email="depablobernat@gmail.com">Bernat de Pablo Gari</author>
+    <content src="index.html"/>
+    <description>App that with a lock gives you the possibility to lock secret messages in a notepad inside of it.</description>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/input.rotating_bezel"/>
+    <icon src="icon.png"/>
+    <name>LockPass</name>
+    <tizen:profile name="wearable"/>
+</widget>

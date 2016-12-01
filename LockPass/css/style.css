@@ -1,0 +1,45 @@
+
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body,html{position: absolute;width: 100%;height: 100%;}
+body {
+    margin: 0;
+    background-color: #222;
+}
+
+.contents {
+	display: flex;
+	display: -webkit-flex;
+	height:360px;
+	width:360px;
+	background-image: url(../images/mockup.png);
+	background-size: 360px;
+}
+
+.number{
+	font-family: 'VT323', monospace;
+	font-size:5rem;
+	color: red;
+	line-height: 100px;
+	text-align:center; 
+}
+
+.circle{
+	background-image: url(../images/circle.png);
+	background-size: 360px;	
+	transition: transform .05s linear;
+  margin: auto;
+
+  width: 360px;
+  height: 360px;
+
+	position:fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.tester{position: absolute;right:0;bottom: 0;background:white;}
+.tester2{position: absolute;left:0;bottom: 0;background:white;}
