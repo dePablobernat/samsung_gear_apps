@@ -3,7 +3,11 @@
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-body,html{position: absolute;width: 100%;height: 100%;}
+body,html{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 body {
     margin: 0;
     background-color: #222;
@@ -17,7 +21,10 @@ body {
 	background-image: url(../images/mockup.png);
 	background-size: 360px;
 }
-
+.number-container {
+  margin: auto;
+  position: relative;
+}
 .number{
 	font-family: 'VT323', monospace;
 	font-size:5rem;
@@ -31,15 +38,18 @@ body {
 	background-size: 360px;	
 	transition: transform .05s linear;
   margin: auto;
-
   width: 360px;
   height: 360px;
-
 	position:fixed;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
 }
-.tester{position: absolute;right:0;bottom: 0;background:white;}
-.tester2{position: absolute;left:0;bottom: 0;background:white;}
+.tester, .tester2{
+  position: absolute;
+  background:white;
+  bottom: 0;
+}
+.tester{right:0;}
+.tester2{left:0;}
