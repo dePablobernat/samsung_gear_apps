@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/earthi" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="BQ5Djp2409.earthi" package="BQ5Djp2409" required_version="2.3.2"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/input.rotating_bezel"/>œ
+    <icon src="icon.png"/>
+    <name>earthi</name>
+    <access origin="*" subdomains="true" />
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>   
+    <tizen:profile name="wearable"/>
+</widget>
