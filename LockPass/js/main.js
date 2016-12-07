@@ -69,7 +69,7 @@ window.onload = function() {
             body.className = '';
             StoredCombinationCode = '';
             eventCount = 0;
-            localStorage.clear();
+            localStorage.removeItem('combinationCode');
         } else {
             eventCount = 0;
         }
@@ -77,13 +77,14 @@ window.onload = function() {
     var SecretChange = function() {
         var changeSecret = confirm('¿Cambiar Secreto?');
         if (changeSecret === true) {
-            body.className = '';
+            storeSecret = '';
             StoredCombinationCode = '';
-            eventCount = 0;
-            localStorage.clear();
-        } else {
-            eventCount = 0;
+            localStorage.removeItem('secreto');
+            SecretMessage = prompt('¿Tu Secreto?: ');
+            localStorage.setItem('secreto', SecretMessage);
+            storeSecret = localStorage.getItem('secreto');
         }
+        eventCount = 0;
     };
 
     if (session) {
@@ -137,7 +138,7 @@ window.onload = function() {
                 TrialCombination += CombinationNumber;
                 if (TrialCombination === storedPassword) {
                     //Show storeSecret Message
-                    alert('Tu Secreto: \n' + SecretMessage);
+                    alert('Tu Secreto: \n' + storeSecret);
                     //Ask if we want to change Password
                     PasswordChange();
                     SecretChange();
@@ -153,25 +154,22 @@ window.onload = function() {
         } else {
             StoredCombinationCode += CombinationNumber;
             if (eventCount === 3) {
-                alert('Tu \n código secreto:\n' + StoredCombinationCode);
-
-                body.className = 'stored';
-                eventCount = 0;
-
-                if (!storeSecret) {
-                    SecretMessage = prompt('¿Tu Secreto?: ');
-                    localStorage.setItem('secreto', SecretMessage);
-                    storeSecret = localStorage.getItem('secreto');
-                } else {
-                    SecretMessage = storeSecret;
-                }
+                debugger;
                 localStorage.setItem('combinationCode', StoredCombinationCode);
                 localStorage.setItem('Session', true);
-
+                alert('Tu \n código secreto:\n' + StoredCombinationCode);
+                body.className = 'stored';
+                eventCount = 0;
+                if (storeSecret) {
+                    SecretMessage = storeSecret;
+                } else {
+                    SecretChange();
+                }
                 storedPassword = localStorage.getItem('combinationCode');
                 session = localStorage.getItem('Session');
 
                 console.log(storedPassword);
+                console.log(storeSecret);
                 CombinationNumber = '';
             }
             ResetWheel('👌');
