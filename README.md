@@ -5,3 +5,7 @@ Apps targeting Gear S2 smartwatch I submitted as part of the "Devices per apps" 
 
 ![alt LockPassapp](https://github.com/dePablobernat/samsung_gear_apps/blob/master/LockPass/icon.png)
 
+* Braille: Learn the Braille alphabet the easiest way posible. Rotate the bisel of your watch to show the letter and his Braille character.
+
+![alt LockPassapp](https://github.com/dePablobernat/samsung_gear_apps/blob/master/BrailleWear/icon.png)
+
